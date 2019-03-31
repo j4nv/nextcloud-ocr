@@ -11,6 +11,7 @@ RUN mkdir -p /usr/share/man/man1 \
         libkrb5-dev \
         smbclient \
         libsmbclient-dev \
+        imagemagick \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
     && ln -s "/usr/include/$(dpkg-architecture --query DEB_BUILD_MULTIARCH)/gmp.h" /usr/include/gmp.h \
