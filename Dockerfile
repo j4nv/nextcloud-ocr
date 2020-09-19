@@ -12,6 +12,7 @@ RUN set -ex; \
         supervisor \
 #       libreoffice \
     ; \
+    perl -pi -e 's/(none)(?=.*\"PS\"|.*\"PS2\"|.*\"PS3\"|.*\"EPS\"|.*\"PDF\"|.*\"XPS\")/read|write/g' /etc/ImageMagick-6/policy.xml; \
     rm -rf /var/lib/apt/lists/*
 
 RUN set -ex; \
